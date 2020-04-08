@@ -1,6 +1,6 @@
 ﻿namespace HerancaAula125.Entities
 {
-    class Account
+    abstract class Account
     {
         public int Number { get; private set; }
         public string Holder { get; private set; }
@@ -17,19 +17,15 @@
             Balance = balance;
         }
 
-        public void Withdraw(double quantia)
+        public virtual void Withdraw(double quantia)
         {
-            Balance -= quantia;
+            Balance -= quantia + 5.0;
         }
 
         public void Deposit(double quantia)
         {
 
             Balance += quantia;
-        }
-
-
-
-
+        }        
     }
 }
