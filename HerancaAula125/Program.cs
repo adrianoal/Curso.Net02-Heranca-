@@ -47,7 +47,7 @@ namespace Course
                     + acc.Number 
                     + ": "
                     + acc.Balance.ToString("F2", CultureInfo.InvariantCulture));
-            }     
+            }
 
 
 
@@ -64,13 +64,13 @@ namespace Course
             // DOWNCASTING
 
             BusinessAccount acc4 = (BusinessAccount)acc2;
-            acc4.Loan(100.0);
+            acc4.Loan(100.0); // Loan --> Op. que faz o emprestimo
 
             // BusinessAccount acc5 = (BusinessAccount)acc3;
             if (acc3 is BusinessAccount)
             {
-                //BusinessAccount acc5 = (BusinessAccount)acc3;
-                BusinessAccount acc5 = acc3 as BusinessAccount;
+                //BusinessAccount acc5 = (BusinessAccount)acc3; 
+                BusinessAccount acc5 = acc3 as BusinessAccount; // Outra forma de fazer o casting (as)
                 acc5.Loan(200.0);
                 Console.WriteLine("Loan!");
             }
@@ -78,7 +78,7 @@ namespace Course
             if (acc3 is SavingAccount)
             {
                 //SavingsAccount acc5 = (SavingsAccount)acc3;
-                SavingAccount acc5 = acc3 as SavingAccount;
+                SavingAccount acc5 = acc3 as SavingAccount; // Outra forma de fazer o casting (as)
                 acc5.UpdateBalance();
                 Console.WriteLine("Update!");
             }
