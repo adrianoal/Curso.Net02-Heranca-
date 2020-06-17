@@ -17,6 +17,7 @@
             Balance = balance;
         }
 
+        // Virtual: Isso sign. q este metodo pode ser sobrescrito pela subclasse:
         public virtual void Withdraw(double quantia)// Op. Saque
         {
             Balance -= quantia + 5.0;

@@ -24,10 +24,13 @@ namespace HerancaAula125.Entities
         {
             Balance += Balance * InterestRate;
         }
+        
+        // override: Sign. q estou 'sobrepondo' aproveitando o metodo da superclasse, e implementando na subclasse, conforme abaixo:
         public override void Withdraw(double quantia)
         {
-            base.Withdraw(quantia);
-            Balance -= 2.0;
+            base.Withdraw(quantia); //base: com o uso da palavra base, eu reaproveito o metodo da superclasse, e implemento minha subclasse com o que eu quiser.
+            Balance -= 2.0; 
+            
         }
 
 
